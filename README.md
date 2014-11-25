@@ -64,6 +64,16 @@ execution expired (Timeout::Error)
 
 If you look at the lines below the gem's trace, you'll see that the slow finder is in `signed_in_user.rb` on line 31 in the `signed_in?` method. Just follow those traces and clean up your code!
 
+## RSpec
+
+If you're using RSpec and the matchers provided by Capybara like:
+
+```ruby
+expect(page).to_not have_content("abc")
+```
+
+then Capybara is already telling RSpec to use the negated method (`has_no_content?`) and thus Capybara is not waiting for the timeout before continuing.
+
 ## Common Fixes
 
 This section will hopefully grow as people contribute common situations and fixes.
