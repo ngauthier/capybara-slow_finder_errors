@@ -11,6 +11,7 @@ module Capybara
         if Time.now-start_time > seconds
           raise SlowFinderError
         end
+        raise
       end
       alias_method :synchronize_without_timeout_error, :synchronize
       alias_method :synchronize, :synchronize_with_timeout_error
