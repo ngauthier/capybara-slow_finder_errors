@@ -97,7 +97,7 @@ Returns true if they are signed in, but it waits a full timeout before returning
 ```ruby
 def signed_in?
   page.has_content?("Dashboard")
-  page.all('a', :text => 'Home').any?
+  page.has_css?('a', :text => 'Home', :wait => false)
 end
 ```
 
