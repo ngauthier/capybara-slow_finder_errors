@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "capybara-slow_finder_errors"
-  spec.version       = "0.1.1"
+  spec.version       = "0.1.2"
   spec.authors       = ["Nick Gauthier"]
   spec.email         = ["ngauthier@gmail.com"]
   spec.summary       = %q{Raises an error when you use a Capybara finder improperly}
