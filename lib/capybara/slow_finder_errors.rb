@@ -8,7 +8,7 @@ module Capybara
         start_time = Time.now
         synchronize_without_timeout_error(*args, &block)
       rescue Capybara::ElementNotFound => e
-        seconds = args.first || Capybara.default_wait_time
+        seconds = args.first || Capybara.default_max_wait_time
         if seconds > 0 && Time.now-start_time > seconds
           raise SlowFinderError, "Timeout reached while running a *waiting* Capybara finder...perhaps you wanted to return immediately? Use a non-waiting Capybara finder. More info: http://blog.codeship.com/faster-rails-tests?utm_source=gem_exception"
         end
