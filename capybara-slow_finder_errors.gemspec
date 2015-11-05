@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "capybara-slow_finder_errors"
-  spec.version       = "0.1.2"
+  spec.version       = "0.1.3"
   spec.authors       = ["Nick Gauthier"]
   spec.email         = ["ngauthier@gmail.com"]
   spec.summary       = %q{Raises an error when you use a Capybara finder improperly}
@@ -17,5 +17,5 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.7"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_dependency "capybara", "~> 2.0"
+  spec.add_dependency "capybara", "~> 2.5"
 end
