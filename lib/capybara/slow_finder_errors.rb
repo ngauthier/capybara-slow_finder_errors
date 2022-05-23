@@ -4,9 +4,9 @@ module Capybara
 
   module Node
     class Base
-      def synchronize_with_timeout_error(*args, &block)
+      def synchronize_with_timeout_error(*args, **kwargs, &block)
         start_time = Time.now
-        synchronize_without_timeout_error(*args, &block)
+        synchronize_without_timeout_error(*args, **kwargs, &block)
       rescue Capybara::ElementNotFound => e
         seconds = args.first || Capybara.default_max_wait_time
         raise e unless seconds > 0 && Time.now-start_time > seconds
